@@ -28,7 +28,7 @@ export const Body: React.FC = () => {
       <div className="flex flex-row flex-wrap gap-2 w-BodyWith m-auto">
         {topStoryIds.map((storyId) => (
           <div className="w-[250px] m-auto">
-            <div className="flex-1 p-4 rounded-3xl mb-4 border border-cyan-600 max-h-48 overflow-scroll">
+            <div className="flex-1 p-4 rounded-3xl mb-4 border border-cyan-600 shadow-md max-h-48 overflow-scroll ">
               <Card key={storyId} id={storyId} />
             </div>
           </div>

@@ -35,7 +35,7 @@ export const Card: React.FC<CardProps> = (props: CardProps) => {
   }, [props.id]);
   return (
     <div className="">
-      <div className="mb-4">
+      <div className="mb-4 text-[#9F8772] ">
         <a
           href={`https://hacker-news.firebaseio.com/v0/item/${props.id}.json`}
           target="_blank"
@@ -47,34 +47,34 @@ export const Card: React.FC<CardProps> = (props: CardProps) => {
 
       <div
         key={props.id}
-        className="bg-[#D1E8E4] hover:bg-[#FEF5ED] hover:shadow-md hover:border-emerald-200  p-4"
+        className="bg-[#F5EFE6] hover:bg-[#FEF5ED] hover:shadow-md hover:border-emerald-200 rounded-tr-lg rounded-tl-lg  p-4"
       >
-        <p>
-          <span className="font-bold">Story title:</span>
+        <p className="text-[#554994]">
+          <span className="font-bold text-[#54BAB9]">Story title:</span>
           {story?.title}
         </p>
         <p>
-          <span className="font-bold">Story id:</span>
+          <span className="font-bold text-[#54BAB9]">Story id:</span>
           {story?.id}
         </p>
         <p>
-          <span className="font-bold">Story score:</span>
+          <span className="font-bold text-[#54BAB9]">Story score:</span>
           {story?.score}
         </p>
         <p>
-          <span className="font-bold">Story author:</span>
+          <span className="font-bold text-[#54BAB9]">Story author:</span>
           {story?.by}
         </p>
         <p>
-          <span className="font-bold">Story descendant:</span>
+          <span className="font-bold text-[#54BAB9]">Story descendant:</span>
           {story?.descendants}
         </p>
         <p>
-          <span className="font-bold">Story time:</span>
+          <span className="font-bold text-[#54BAB9]">Story time:</span>
           {story?.time}
         </p>
         <p>
-          <span className="font-bold">Story type:</span>
+          <span className="font-bold text-[#54BAB9]">Story type:</span>
           {story?.type}
         </p>
         {/* <p className="text-base">
