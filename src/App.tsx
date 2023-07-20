@@ -7,7 +7,7 @@ import { Header } from "./components/header/Header";
 function App() {
   return (
     <div className="flex flex-col flex-wrap">
-      <Header headline={"Top Stories From HackerNews By Arya"} />
+      <Header headline="Top Stories From HackerNews By Arya" />
       <Body />
       <Footer />
     </div>
