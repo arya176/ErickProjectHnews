@@ -77,12 +77,12 @@ export const Card: React.FC<CardProps> = (props: CardProps) => {
           <span className="font-bold text-[#54BAB9]">Story type:</span>
           {story?.type}
         </p>
-        {/* <p className="text-base">
+        <p className="text-base">
           Story type:
           {story?.kids.map((kid) => {
-            return <div></div>;
+            return <div>{kid}</div>;
           })}
-        </p> */}
+        </p>
       </div>
     </div>
   );

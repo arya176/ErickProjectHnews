@@ -37,14 +37,3 @@ export const Body: React.FC = () => {
     </div>
   );
 };
-
-// export const Body = () => {
-//   return (
-//     <div className="flex flex-row flex-wrap gap-2 w-BodyWith m-auto ">
-//       <div className="bg-red-400 w-1/3 flex-1">1</div>
-//       <div className="bg-blue-400 w-1/3 flex-1">2</div>
-//       <div className="bg-green-400 w-1/3 flex-1">3</div>
-//       <div className="bg-orange-400 w-1/3 flex-1">4</div>
-//     </div>
-//   );
-// };
