@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 type CardProps = {
   id: number;
@@ -33,6 +34,7 @@ export const Card: React.FC<CardProps> = (props: CardProps) => {
 
     fetchStory();
   }, [props.id]);
+  console.log(story);
   return (
     <div className="">
       <div className="mb-4 text-[#9F8772] ">
@@ -51,7 +53,7 @@ export const Card: React.FC<CardProps> = (props: CardProps) => {
       >
         <p className="text-[#554994]">
           <span className="font-bold text-[#54BAB9]">Story title:</span>
-          {story?.title}
+          <Link to={`/stories/${story?.id}/`}> {story?.title} </Link>
         </p>
         <p>
           <span className="font-bold text-[#54BAB9]">Story id:</span>
@@ -76,12 +78,6 @@ export const Card: React.FC<CardProps> = (props: CardProps) => {
         <p>
           <span className="font-bold text-[#54BAB9]">Story type:</span>
           {story?.type}
-        </p>
-        <p className="text-base">
-          Story type:
-          {story?.kids.map((kid) => {
-            return <div>{kid}</div>;
-          })}
         </p>
       </div>
     </div>
