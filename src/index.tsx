@@ -1,16 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
+import { HomePage } from "./HomePage";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { DetailsPage } from "./components/pages/DetailsPage";
 import { ErrorPage } from "./components/pages/ErrorPage";
+import { Footer } from "./components/footer/Footer";
+import { Header } from "./components/header/Header";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <HomePage />,
     errorElement: <ErrorPage />,
   },
   {
@@ -24,7 +26,9 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
+    <Header headline="Top Stories From HackerNews By Arya" />
     <RouterProvider router={router} />
+    <Footer />
   </React.StrictMode>
 );
 

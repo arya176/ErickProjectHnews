@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Card } from "../card/Card";
+import { Card } from "./components/card/Card";
 
-export const Body: React.FC = () => {
+export const HomePage: React.FC = () => {
   const [topStoryIds, setTopStoryIds] = useState<number[]>([]);
   useEffect(() => {
     const fetchTopStoryIds = async () => {
