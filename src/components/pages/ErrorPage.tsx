@@ -8,13 +8,13 @@ export const ErrorPage = () => {
   console.error(error);
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-row flex-wrap">
       <div
         id="error-page"
-        className="w-2/4 m-auto align-middle justify-center  text-center text-lg bg-slate-400 rounded-lg"
+        className="w-2/4 m-auto text-center text-lg bg-[#FEBBCC] rounded-lg mt-40 border shadow-xl"
       >
-        <h1>Oops!</h1>
-        <p>Sorry, an unexpected error has occurred.</p>
+        <h1 className="py-32 text-lg font-bold font-serif ">Oops!</h1>
+        <p className="pb-8">Sorry, an unexpected error has occurred.</p>
         <p>
           <i>{error?.statusText || error?.message}</i>
         </p>
