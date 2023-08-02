@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import { HomePage } from "./HomePage";
+import { HomePage } from "./pages/HomePage";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { DetailsPage } from "./components/pages/DetailsPage";
-import { ErrorPage } from "./components/pages/ErrorPage";
+import { DetailsPage } from "./pages/DetailsPage";
+import { ErrorPage } from "./pages/ErrorPage";
 import { Footer } from "./components/footer/Footer";
 import { Header } from "./components/header/Header";
 

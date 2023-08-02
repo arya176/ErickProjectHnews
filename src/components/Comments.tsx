@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { CommentDetails } from "./CommentDetails";
 
 type Props = {

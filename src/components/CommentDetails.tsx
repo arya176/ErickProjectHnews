@@ -32,11 +32,18 @@ export const CommentDetails = (props: Props) => {
     fetchComment();
   }, [props.id]);
   return (
-    <>
-      <div>{comment?.id}</div>
-      <div>{comment?.by}</div>
-      <div>{comment?.text}</div>;
+    <div className="mt-8  w-BodyWith">
+      <div>
+        <span className="text-[#54BAB9]">Wrriten By:</span> {comment?.by}
+      </div>
+      <div>
+        <span className="text-[#54BAB9]">comment ID:</span> {comment?.id}
+      </div>
+      <div>
+        <span className="bg-[#54BAB9]">Story comment:</span> {comment?.text}
+      </div>
+      ;
       <hr />
-    </>
+    </div>
   );
 };

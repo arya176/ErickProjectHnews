@@ -80,6 +80,7 @@ export const Card: React.FC<CardProps> = (props: CardProps) => {
           <span className="font-bold text-[#54BAB9]">Story type:</span>
           {story?.type}
         </p>
+        <hr />
       </div>
     </div>
   );

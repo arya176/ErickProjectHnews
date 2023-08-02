@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
-import { Card, Story } from "../card/Card";
-import { Comments } from "../Comments";
+import { Card, Story } from "../components/card/Card";
+import { Comments } from "../components/Comments";
 import { useEffect, useState } from "react";
 
 export const DetailsPage = () => {

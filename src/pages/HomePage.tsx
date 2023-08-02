@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Card } from "./components/card/Card";
+import { Card } from "../components/card/Card";
 
 export const HomePage: React.FC = () => {
   const [topStoryIds, setTopStoryIds] = useState<number[]>([]);
