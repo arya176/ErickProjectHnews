@@ -38,7 +38,7 @@ export const Card: React.FC<CardProps> = (props: CardProps) => {
 
   return (
     <div className="">
-      <div className="mb-4 text-[#182747]  px-2">
+      <div className="mb-2 text-[#182747]  px-2">
         <a
           href={`https://hacker-news.firebaseio.com/v0/item/${props.id}.json`}
           target="_blank"
