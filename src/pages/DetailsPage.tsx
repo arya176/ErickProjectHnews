@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { Card, Story } from "../components/card/Card";
+import { Story } from "../components/card/Card";
 import { Comments } from "../components/Comments";
 import { useEffect, useState } from "react";
 
@@ -29,27 +29,27 @@ export const DetailsPage = () => {
   return (
     <div className="w-2/4 m-auto mt-6">
       <p>
-        <span className="font-bold text-[#54BAB9]">Story id:</span>
+        <span className="font-bold text-[#00B8FC]">Story id:</span>
         {story?.id}
       </p>
       <p>
-        <span className="font-bold text-[#54BAB9]">Story score:</span>
+        <span className="font-bold text-[#00B8FC]">Story score:</span>
         {story?.score}
       </p>
       <p>
-        <span className="font-bold text-[#54BAB9]">Story author:</span>
+        <span className="font-bold text-[#00B8FC]">Story author:</span>
         {story?.by}
       </p>
       <p>
-        <span className="font-bold text-[#54BAB9]">Story descendant:</span>
+        <span className="font-bold text-[#00B8FC]">Story descendant:</span>
         {story?.descendants}
       </p>
       <p>
-        <span className="font-bold text-[#54BAB9]">Story time:</span>
+        <span className="font-bold text-[#00B8FC]">Story time:</span>
         {story?.time}
       </p>
       <p>
-        <span className="font-bold text-[#54BAB9]">Story type:</span>
+        <span className="font-bold text-[#00B8FC]">Story type:</span>
         {story?.type}
       </p>
       <Comments kids={story?.kids} />

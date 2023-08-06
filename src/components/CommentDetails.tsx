@@ -34,13 +34,13 @@ export const CommentDetails = (props: Props) => {
   return (
     <div className="mt-8  w-BodyWith">
       <div>
-        <span className="text-[#54BAB9]">Wrriten By:</span> {comment?.by}
+        <span className="text-[#00B8FC]">Wrriten By:</span> {comment?.by}
       </div>
       <div>
-        <span className="text-[#54BAB9]">comment ID:</span> {comment?.id}
+        <span className="text-[#00B8FC]">comment ID:</span> {comment?.id}
       </div>
       <div>
-        <span className="bg-[#54BAB9]">Story comment:</span> {comment?.text}
+        <span className="bg-[#00B8FC]">Story comment:</span> {comment?.text}
       </div>
       ;
       <hr />

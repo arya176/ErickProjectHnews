@@ -22,10 +22,10 @@ export const HomePage: React.FC = () => {
 
   return (
     <div>
-      <div className="flex flex-row flex-wrap gap-2 w-BodyWith m-auto">
+      <div className="flex flex-row flex-wrap w-4/6 m-auto gap-8 ">
         {topStoryIds.map((storyId) => (
           <div className="w-[250px] m-auto">
-            <div className="flex-1 p-4 rounded-3xl mb-4 border border-cyan-600 shadow-md max-h-48 overflow-scroll bg-[#FFBF86]">
+            <div className="flex-1 p-4  bg-[#F0F0F0] h-80">
               <Card key={storyId} id={storyId} />
             </div>
           </div>
