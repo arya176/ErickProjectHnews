@@ -7,16 +7,16 @@ export const ErrorPage = () => {
   console.error(error);
 
   return (
-    <div className="flex flex-row flex-wrap">
-      <div
-        id="error-page"
-        className="w-2/4 m-auto text-center text-lg bg-[#FEBBCC] rounded-lg mt-40 border shadow-xl"
-      >
-        <h1 className="py-32 text-lg font-bold font-serif ">Oops!</h1>
-        <p className="pb-8">Sorry, an unexpected error has occurred.</p>
-        <p>
-          <i>{error?.statusText || error?.message}</i>
-        </p>
+    <div className="flex items-center justify-center h-screen">
+      <div className="flex justify-center items-center">
+        <img src="./images/error.png" alt="" className="w-[250px]" />
+        <div id="error-page" className="ml-4">
+          <h1 className="py-4 text-lg font-bold font-serif">Oops!</h1>
+          <p className="pb-4">Don't worry, an unexpected error has occurred.</p>
+          <p>
+            <i>{error?.statusText || error?.message}</i>
+          </p>
+        </div>
       </div>
     </div>
   );

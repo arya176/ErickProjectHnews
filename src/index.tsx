@@ -10,14 +10,36 @@ import { Footer } from "./components/footer/Footer";
 import { Header } from "./components/header/Header";
 
 const router = createBrowserRouter([
+  //   {
+  //     path: "/",
+  //     element: <HomePage />,
+  //     errorElement: <ErrorPage />,
+  //   },
+  //   {
+  //     path: "/stories/:storyId/",
+  //     element: <DetailsPage />,
+  //   },
+  // ]);
   {
     path: "/",
-    element: <HomePage />,
+    element: (
+      <>
+        <Header headline="Top Stories From HackerNews By Arya" />
+        <HomePage />
+        <Footer />
+      </>
+    ),
     errorElement: <ErrorPage />,
   },
   {
     path: "/stories/:storyId/",
-    element: <DetailsPage />,
+    element: (
+      <>
+        <Header headline="Top Stories From HackerNews By Arya" />
+        <DetailsPage />
+        <Footer />
+      </>
+    ),
   },
 ]);
 
@@ -26,13 +48,8 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <Header headline="Top Stories From HackerNews By Arya" />
     <RouterProvider router={router} />
-    <Footer />
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
