@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Card } from "../components/card/Card";
+import { useLocation } from "react-router-dom";
 
 export const HomePage: React.FC = () => {
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const quantity = parseInt(searchParams.get("quantity") || "0", 10);
+
   const [topStoryIds, setTopStoryIds] = useState<number[]>([]);
   useEffect(() => {
     const fetchTopStoryIds = async () => {
@@ -10,7 +15,7 @@ export const HomePage: React.FC = () => {
           "https://hacker-news.firebaseio.com/v0/topstories.json"
         );
         const data: number[] = await response.json();
-        const slicedData = data.slice(0, 13);
+        const slicedData = data.slice(0, quantity);
         setTopStoryIds(slicedData);
       } catch (error) {
         console.error("Error fetching top story IDs:", error);
@@ -18,7 +23,7 @@ export const HomePage: React.FC = () => {
     };
 
     fetchTopStoryIds();
-  }, []);
+  }, [quantity]);
 
   return (
     <div>

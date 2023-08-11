@@ -8,20 +8,16 @@ import { DetailsPage } from "./pages/DetailsPage";
 import { ErrorPage } from "./pages/ErrorPage";
 import { Footer } from "./components/footer/Footer";
 import { Header } from "./components/header/Header";
+import { Entry } from "./components/Entry";
 
 const router = createBrowserRouter([
-  //   {
-  //     path: "/",
-  //     element: <HomePage />,
-  //     errorElement: <ErrorPage />,
-  //   },
-  //   {
-  //     path: "/stories/:storyId/",
-  //     element: <DetailsPage />,
-  //   },
-  // ]);
   {
     path: "/",
+    element: <Entry />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/home",
     element: (
       <>
         <Header headline="Top Stories From HackerNews By Arya" />
@@ -29,7 +25,6 @@ const router = createBrowserRouter([
         <Footer />
       </>
     ),
-    errorElement: <ErrorPage />,
   },
   {
     path: "/stories/:storyId/",
