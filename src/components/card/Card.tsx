@@ -48,9 +48,9 @@ export const Card: React.FC<CardProps> = (props: CardProps) => {
         </a>
       </div>
 
-      <div key={props.id} className="bg-[#F0F0F0]  px-2 pb-8 h-[250px]">
+      <div key={props.id} className="  px-4 pb-8 h-[250px]">
         <div className="">
-          <p className="text-[#182747] mb-2 ">
+          <p className="text-[#182747] mb-2 hover:bg-slate-100 p-2">
             <span className=" text-[#00B8FC] font-sans font-bold">
               Story title:
             </span>

@@ -25,6 +25,7 @@ const router = createBrowserRouter([
         <Footer />
       </>
     ),
+    errorElement: <ErrorPage />,
   },
   {
     path: "/stories/:storyId/",
@@ -35,6 +36,7 @@ const router = createBrowserRouter([
         <Footer />
       </>
     ),
+    errorElement: <ErrorPage />,
   },
 ]);
 
