@@ -2,10 +2,12 @@ import React, { useEffect, useState } from "react";
 import { Card } from "../components/card/Card";
 import { useLocation } from "react-router-dom";
 
-export const HomePage: React.FC = () => {
+export const ResultPage: React.FC = () => {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const quantity = parseInt(searchParams.get("quantity") || "0", 10);
+
+  // const searchQuery = searchParams.get("search") || ""; // Get the search query
 
   const [topStoryIds, setTopStoryIds] = useState<number[]>([]);
   useEffect(() => {
@@ -15,6 +17,7 @@ export const HomePage: React.FC = () => {
           "https://hacker-news.firebaseio.com/v0/topstories.json"
         );
         const data: number[] = await response.json();
+
         const slicedData = data.slice(0, quantity);
         setTopStoryIds(slicedData);
       } catch (error) {

@@ -1,18 +1,29 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 
-export const Entry = () => {
+export const HomePage = () => {
   const navigate = useNavigate(); // Initialize navigate function
   const [quantity, setQuantity] = useState("");
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (quantity !== "") {
-      navigate(`/home?quantity=${quantity}`); // Use navigate function
+      navigate(`/Result?quantity=${quantity}`); // Use navigate function
     } else {
-      navigate(`/home?quantity`);
+      navigate(`/Result?quantity`);
     }
   };
+
+  // const [searchQuery, setSearchQuery] = useState("");
+
+  // const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  //   e.preventDefault();
+  //   if (quantity !== "") {
+  //     navigate(`/home?quantity=${quantity}&search=${searchQuery}`);
+  //   } else {
+  //     navigate(`/home?quantity&search=${searchQuery}`);
+  //   }
+  // };
 
   return (
     <div>

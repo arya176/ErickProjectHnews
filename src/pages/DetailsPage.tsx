@@ -22,10 +22,6 @@ export const DetailsPage = () => {
     fetchStory();
   }, [storyId]);
 
-  // fetch story details just like inside the card
-  // get kids from the story
-  // set kids to state
-  // pass kids to comments
   return (
     <div className="w-2/4 m-auto mt-6">
       <p>

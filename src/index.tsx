@@ -1,27 +1,27 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import { HomePage } from "./pages/HomePage";
+import { ResultPage } from "./pages/ResultPage";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { DetailsPage } from "./pages/DetailsPage";
 import { ErrorPage } from "./pages/ErrorPage";
 import { Footer } from "./components/footer/Footer";
 import { Header } from "./components/header/Header";
-import { Entry } from "./components/Entry";
+import { HomePage } from "./components/HomePage";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Entry />,
+    element: <HomePage />,
     errorElement: <ErrorPage />,
   },
   {
-    path: "/home",
+    path: "/Result",
     element: (
       <>
         <Header headline="Top Stories From HackerNews By Arya" />
-        <HomePage />
+        <ResultPage />
         <Footer />
       </>
     ),
